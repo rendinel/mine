@@ -1,6 +1,6 @@
-const sanityConfig = require('./sanity-config');
+const sanityConfig = require('./sanity-config')
 
-require('dotenv').config('./.env');
+require('dotenv').config('./.env')
 
 module.exports = {
   siteMetadata: {
@@ -134,4 +134,4 @@ module.exports = {
       },
     },
   ],
-};
+}
