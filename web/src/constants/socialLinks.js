@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
+import React from 'react'
+import { FaYoutube, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa'
 
 export const socialLinks = [
   {
@@ -13,13 +13,13 @@ export const socialLinks = [
     icon: <FaInstagram />,
   },
   {
-    name: 'facebook',
-    url: 'https://www.facebook.com',
-    icon: <FaFacebook />,
+    name: 'github',
+    url: 'https://github.com/rendinel',
+    icon: <FaGithub />,
   },
   {
     name: 'twitter',
     url: 'https://www.twitter.com',
     icon: <FaTwitter />,
   },
-];
+]

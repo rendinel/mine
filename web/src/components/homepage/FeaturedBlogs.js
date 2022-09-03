@@ -1,9 +1,9 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
-import { FeaturedBlogsStyles } from '../../styles/homePage/FeaturedBlogsStyles';
-import BlogGrid from '../blog/BlogGrid';
-import ParagraphText from '../typography/ParagraphText';
-import { SectionTitle } from '../typography/Title';
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+import { FeaturedBlogsStyles } from '../../styles/homePage/FeaturedBlogsStyles'
+import BlogGrid from '../blog/BlogGrid'
+import ParagraphText from '../typography/ParagraphText'
+import { SectionTitle } from '../typography/Title'
 
 function FeaturedBlogs() {
   const data = useStaticQuery(graphql`
@@ -33,19 +33,14 @@ function FeaturedBlogs() {
         }
       }
     }
-  `);
-  const featuredBlogs = data.allSanityFeatured.nodes[0].blogs;
+  `)
+  const featuredBlogs = data.allSanityFeatured.nodes[0].blogs
   return (
     <FeaturedBlogsStyles>
-      <SectionTitle>Featured Blogs</SectionTitle>
-      <ParagraphText className="featuredBlogs__text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo
-        ad provident consectetur quis eaque doloribus et, ducimus earum iste est
-        corporis
-      </ParagraphText>
+      <SectionTitle>Blog</SectionTitle>
       <BlogGrid blogs={featuredBlogs} />
     </FeaturedBlogsStyles>
-  );
+  )
 }
 
-export default FeaturedBlogs;
+export default FeaturedBlogs

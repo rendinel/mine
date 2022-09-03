@@ -1,8 +1,10 @@
-import React from 'react';
-import { BlogGridStyles } from '../../styles/blog/BlogGridStyles';
-import BlogItem from './BlogItem';
+import React from 'react'
+import { BlogGridStyles } from '../../styles/blog/BlogGridStyles'
+import BlogItem from './BlogItem'
+import ProjectItem from './ProjectItem'
 
-function BlogGrid({ blogs }) {
+function BlogGrid({ blogs, projects }) {
+  console.log(projects)
   return (
     <BlogGridStyles>
       {blogs &&
@@ -19,8 +21,21 @@ function BlogGrid({ blogs }) {
             publishedAt={blog.publishedAt}
           />
         ))}
+      {projects &&
+        projects.map((project) => (
+          <ProjectItem
+            key={project.id}
+            title={project.title}
+            live={project.live}
+            code={project.code}
+            technology={project.technology}
+            image={project.coverImage.asset.gatsbyImageData}
+            alt={project.coverImage.alt}
+            excerpt={project.excerpt[0].children[0].text}
+          />
+        ))}
     </BlogGridStyles>
-  );
+  )
 }
 
-export default BlogGrid;
+export default BlogGrid
