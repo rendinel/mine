@@ -1,4 +1,4 @@
-import { MdWork } from 'react-icons/md';
+import { MdWork } from 'react-icons/md'
 
 export default {
   title: 'Rich Text',
@@ -11,6 +11,8 @@ export default {
       styles: [
         { title: 'Normal', value: 'normal' },
         { title: 'H1', value: 'h1' },
+        { title: 'H2', value: 'h2' },
+        { title: 'H3', value: 'h3' },
       ],
       lists: [
         { title: 'Bullet List', value: 'bullet' },
@@ -51,4 +53,4 @@ export default {
       type: 'customCode',
     },
   ],
-};
+}
