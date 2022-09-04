@@ -2,10 +2,10 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import LogoStyles from '../styles/LogoStyles'
 
-const Logo = () => (
+const Logofooteer = () => (
   <LogoStyles to='/'>
-    <StaticImage src='../images/logo2.svg' alt='my logo' />
+    <StaticImage src='../images/logof.svg' alt='my logo' />
   </LogoStyles>
 )
 
-export default Logo
+export default Logofooteer

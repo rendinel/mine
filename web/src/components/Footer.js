@@ -3,13 +3,13 @@ import React from 'react'
 import { menu } from '../constants/menu'
 import { socialLinks } from '../constants/socialLinks'
 import { FooterStyles } from '../styles/FooterStyles'
-import Logo from './Logo'
+import Logofooter from './Logofooter'
 import ParagraphText from './typography/ParagraphText'
 
 const Footer = () => (
   <FooterStyles>
     <div className='container'>
-      <Logo />
+      <Logofooter />
       <ul className='footer__menuList'>
         {menu.map((item) => (
           <li key={item.path}>

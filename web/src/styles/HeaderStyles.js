@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export default styled.header`
   width: 100%;
@@ -138,4 +138,4 @@ export default styled.header`
       }
     }
   }
-`;
+`

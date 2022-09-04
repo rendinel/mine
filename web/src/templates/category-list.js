@@ -1,10 +1,10 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import PageSpace from '../components/PageSpace';
-import SEO from '../components/SEO';
-import PageHeader from '../components/PageHeader';
-import CategoryGrid from '../components/category/CategoryGrid';
-import Pagination from '../components/Pagination';
+import React from 'react'
+import { graphql } from 'gatsby'
+import PageSpace from '../components/PageSpace'
+import SEO from '../components/SEO'
+import PageHeader from '../components/PageHeader'
+import CategoryGrid from '../components/category/CategoryGrid'
+import Pagination from '../components/Pagination'
 
 export const CategoryListQuery = graphql`
   query categoriesQuery($limit: Int!, $offset: Int!) {
@@ -23,33 +23,30 @@ export const CategoryListQuery = graphql`
       }
     }
   }
-`;
+`
 
 function Categories({ data, pageContext }) {
-  const { currentPage, numberOfPages } = pageContext;
-  const categories = data.allSanityCategory.nodes;
+  const { currentPage, numberOfPages } = pageContext
+  const categories = data.allSanityCategory.nodes
 
   return (
     <>
-      <SEO title="Categories" />
+      <SEO title='Categories' />
       <PageSpace top={80} bottom={100}>
-        <div className="container">
-          <PageHeader
-            title="All Categories"
-            description="This month will bring about the 88th Academy Awards. Starting in 1928, this prestigious award ceremony..."
-          />
+        <div className='container'>
+          <PageHeader title='All Categories' description='' />
           <CategoryGrid categories={categories} />
           {numberOfPages > 1 && (
             <Pagination
               currentPage={currentPage}
               numberOfPages={numberOfPages}
-              baseURL="/categories"
+              baseURL='/categories'
             />
           )}
         </div>
       </PageSpace>
     </>
-  );
+  )
 }
 
-export default Categories;
+export default Categories

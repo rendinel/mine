@@ -1,4 +1,4 @@
-import { MdStar } from 'react-icons/md';
+import { MdStar } from 'react-icons/md'
 
 export default {
   name: 'featured',
@@ -42,4 +42,4 @@ export default {
       ],
     },
   ],
-};
+}
