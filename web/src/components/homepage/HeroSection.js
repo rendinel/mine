@@ -24,7 +24,7 @@ const HeroSection = () => (
         <div className='right'>
           <StaticImage
             className='hero__image'
-            src='../../images/demo.jpg'
+            src='../../images/demo4.jpg'
             alt='vr guy'
             placeholder='blurred'
             objectPosition='50% 30%'

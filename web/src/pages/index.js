@@ -10,7 +10,6 @@ const IndexPage = () => (
     <SEO />
     <HeroSection />
     <div className='container'>
-      {/*some mod */}
       <FeaturedBlogs />
       <Project />
       <TopCategories />
