@@ -4,7 +4,7 @@ import AuthorGrid from '../components/author/AuthorGrid'
 import PageHeader from '../components/PageHeader'
 import PageSpace from '../components/PageSpace'
 import Pagination from '../components/Pagination'
-import SEO from '../components/SEO'
+import { SEO } from '../components/seo'
 
 export const AuthorsQuery = graphql`
   query authorQuery($limit: Int!, $offset: Int!) {
@@ -32,7 +32,7 @@ function AuthorList({ data, pageContext }) {
 
   return (
     <PageSpace top={80} bottom={100}>
-      <SEO title='Authors' />
+      <SEO title='Rendinel.dev | Authors' />
       <div className='container'>
         <PageHeader title='All Authors' description='' />
         <AuthorGrid authors={authors} />

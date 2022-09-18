@@ -1,11 +1,10 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import PageHeader from '../components/PageHeader'
-import SEO from '../components/SEO'
 import PageSpace from '../components/PageSpace'
 import BlogGrid from '../components/blog/BlogGrid'
 import Pagination from '../components/Pagination'
-
+import { SEO } from '../components/seo'
 export const BlogsQuery = graphql`
   query blogListQuery($limit: Int!, $offset: Int!) {
     allSanityBlog(
@@ -43,8 +42,8 @@ function Blogs({ data, pageContext }) {
 
   return (
     <>
-      <SEO title='Blogs' />
       <PageSpace top={80} bottom={100}>
+        <SEO title='Rendinel.dev | Blog Homepage' />
         <div className='container'>
           <PageHeader title='All Blog Posts' description='' />
           <BlogGrid blogs={blogs} />

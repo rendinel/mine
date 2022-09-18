@@ -1,12 +1,12 @@
-import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import React from 'react';
-import BlogGrid from '../components/blog/BlogGrid';
-import MyPortableText from '../components/MyPortableText';
-import PageHeader from '../components/PageHeader';
-import PageSpace from '../components/PageSpace';
-import SEO from '../components/SEO';
-import { SingleCategoryStyles } from '../styles/category/SingleCategoryStyles';
+import { graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import React from 'react'
+import BlogGrid from '../components/blog/BlogGrid'
+import MyPortableText from '../components/MyPortableText'
+import PageHeader from '../components/PageHeader'
+import PageSpace from '../components/PageSpace'
+import { SingleCategoryStyles } from '../styles/category/SingleCategoryStyles'
+import { SEO } from '../components/seo'
 
 export const query = graphql`
   query SingleCategory($id: String!) {
@@ -43,30 +43,30 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
 function SingleCategory({ data }) {
-  const category = data.sanityCategory;
-  const blogs = data.allSanityBlog.nodes;
+  const category = data.sanityCategory
+  const blogs = data.allSanityBlog.nodes
 
   return (
     <PageSpace top={80} bottom={100}>
+      <SEO title={`Rendinel.dev | ${category.title} posts`} />
       <SingleCategoryStyles>
-        <div className="container">
-          <SEO title={category.title} />
-          <PageHeader title={category.title} className="pageHeader">
+        <div className='container'>
+          <PageHeader title={category.title} className='pageHeader'>
             <MyPortableText value={category._rawDescription} />
             <GatsbyImage
               image={category.coverImage.asset.gatsbyImageData}
               alt={category.coverImage.alt}
-              className="coverImage"
+              className='coverImage'
             />
           </PageHeader>
           <BlogGrid blogs={blogs} />
         </div>
       </SingleCategoryStyles>
     </PageSpace>
-  );
+  )
 }
 
-export default SingleCategory;
+export default SingleCategory

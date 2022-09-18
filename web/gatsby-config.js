@@ -4,13 +4,14 @@ require('dotenv').config('./.env')
 
 module.exports = {
   siteMetadata: {
-    title: `Rendinel.dev-blog`,
-    siteUrl: `https://techhub-blog.netlify.com`,
+    title: `Rendinel.dev`,
+    siteUrl: `https://rendinel.dev`,
     description: `Rendinel Blog is a platform for latest technology news and updates.`,
+    twitterUsername: `@rendinel.dev`,
+    image: `/logo.svg`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

@@ -1,12 +1,12 @@
-import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import React from 'react';
-import BlogGrid from '../components/blog/BlogGrid';
-import MyPortableText from '../components/MyPortableText';
-import PageSpace from '../components/PageSpace';
-import SEO from '../components/SEO';
-import { Title } from '../components/typography/Title';
-import { SingleAuthorStyles } from '../styles/author/SingleAuthorStyles';
+import { graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import React from 'react'
+import BlogGrid from '../components/blog/BlogGrid'
+import MyPortableText from '../components/MyPortableText'
+import PageSpace from '../components/PageSpace'
+import { Title } from '../components/typography/Title'
+import { SingleAuthorStyles } from '../styles/author/SingleAuthorStyles'
+import { SEO } from '../components/seo'
 
 export const authorQuery = graphql`
   query SingleAuthorQuery($id: String!) {
@@ -43,33 +43,33 @@ export const authorQuery = graphql`
       }
     }
   }
-`;
+`
 
 function SingleAuthor({ data }) {
-  const author = data.sanityAuthor;
-  const blogs = data.allSanityBlog.nodes;
+  const author = data.sanityAuthor
+  const blogs = data.allSanityBlog.nodes
   return (
     <PageSpace top={80} bottom={100}>
-      <SEO title={author.name} />
-      <div className="container">
+      <SEO title={`Rendinel.dev | ${author.name} posts`} />
+      <div className='container'>
         <SingleAuthorStyles>
-          <div className="author-header">
+          <div className='author-header'>
             <GatsbyImage
               image={author.profileImage.asset.gatsbyImageData}
               alt={author.profileImage.alt}
-              className="profileImage"
+              className='profileImage'
             />
-            <Title className="name">{author.name}</Title>
-            <div className="bio">
+            <Title className='name'>{author.name}</Title>
+            <div className='bio'>
               <MyPortableText value={author._rawBio} />
             </div>
           </div>
-          <hr className="hr" />
+          <hr className='hr' />
           <BlogGrid blogs={blogs} />
         </SingleAuthorStyles>
       </div>
     </PageSpace>
-  );
+  )
 }
 
-export default SingleAuthor;
+export default SingleAuthor

@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PageSpace from '../components/PageSpace'
-import SEO from '../components/SEO'
 import PageHeader from '../components/PageHeader'
 import CategoryGrid from '../components/category/CategoryGrid'
 import Pagination from '../components/Pagination'
+import { SEO } from '../components/seo'
 
 export const CategoryListQuery = graphql`
   query categoriesQuery($limit: Int!, $offset: Int!) {
@@ -31,8 +31,8 @@ function Categories({ data, pageContext }) {
 
   return (
     <>
-      <SEO title='Categories' />
       <PageSpace top={80} bottom={100}>
+        <SEO title='Rendinel.dev | Categories' />
         <div className='container'>
           <PageHeader title='All Categories' description='' />
           <CategoryGrid categories={categories} />
