@@ -7,8 +7,8 @@ module.exports = {
     title: `Rendinel.dev`,
     siteUrl: `https://rendinel.dev`,
     description: `Rendinel Blog is a platform for latest technology news and updates.`,
-    twitterUsername: `@rendinel.dev`,
-    image: `/logo.svg`,
+    twitterUsername: `@LucioRendine`,
+    image: `https://www.rendinel.dev/static/4c3a87832271f8d59d39642b7ad98770/5f169/logof.webp`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
